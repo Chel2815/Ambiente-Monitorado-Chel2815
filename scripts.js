@@ -1,10 +1,10 @@
 let token = null; // Variável para armazenar o token JWT
 
     const sensors = [
-      { sensor_id: 1, room: 'Cozinha', countdown: 60, lastTemperature: null },
-      { sensor_id: 2, room: 'Sala', countdown: 60, lastTemperature: null },
-      { sensor_id: 3, room: 'Quarto', countdown: 60, lastTemperature: null },
-      { sensor_id: 4, room: 'Escritório', countdown: 60, lastTemperature: null },
+      { sensor_id: 1, room: 'Cozinha', countdown: 30, lastTemperature: null },
+      { sensor_id: 2, room: 'Sala', countdown: 30, lastTemperature: null },
+      { sensor_id: 3, room: 'Quarto', countdown: 30, lastTemperature: null },
+      { sensor_id: 4, room: 'Escritório', countdown: 30, lastTemperature: null },
     ];
 
     // Função para simular a temperatura usando dados históricos de São Paulo
@@ -86,7 +86,7 @@ let token = null; // Variável para armazenar o token JWT
           countdownElement.textContent = `Próximo envio automático em ${sensor.countdown} segundos`;
         } else {
           sendData(sensor);
-          sensor.countdown = 60;
+          sensor.countdown = 30;
           countdownElement.textContent = `Próximo envio automático em ${sensor.countdown} segundos`;
         }
       });
@@ -96,7 +96,7 @@ let token = null; // Variável para armazenar o token JWT
     const handleSendButtonClick = (sensorId) => {
       const sensor = sensors.find(s => s.sensor_id === sensorId);
       sendData(sensor);
-      sensor.countdown = 60;
+      sensor.countdown = 30;
       document.getElementById(`countdown-${sensor.sensor_id}`).textContent = `Próximo envio automático em ${sensor.countdown} segundos`;
     };
 
