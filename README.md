@@ -1,6 +1,6 @@
 # CheckPoint TAdP
 
-## Grupo: Marchel Augusto - RM: 99856, Danilo Augusto - RM:97810, Gabriel Rocha - RM: 552552, Vinicius Olivetti - RM: 98255, Gabriel Sakura - RM: 99522
+## Desenvolvido por Marchel Augusto e @hecasan
 
 ### API para monitoramento de ambientes domésticos.
 ## Tela do projeto
